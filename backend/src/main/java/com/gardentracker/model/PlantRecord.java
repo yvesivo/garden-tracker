@@ -27,7 +27,10 @@ public class PlantRecord {
     @Enumerated(EnumType.STRING)
     private PlantStatus status = PlantStatus.PLANNED;
 
+    @Column(name = "grid_x")
     private Integer gridX;
+
+    @Column(name = "grid_y")
     private Integer gridY;
 
     private String notes;
