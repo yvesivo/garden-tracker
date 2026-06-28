@@ -6,17 +6,21 @@ public class GardenResponse {
     private Long id;
     private String name;
     private String description;
+    private double widthMeters;
+    private double heightMeters;
     private String location;
     private LocalDateTime createdAt;
     private int plantRecordCount;
 
     public GardenResponse() {}
 
-    public GardenResponse(Long id, String name, String description, String location,
-                          LocalDateTime createdAt, int plantRecordCount) {
+    public GardenResponse(Long id, String name, String description, double widthMeters, double heightMeters,
+                          String location, LocalDateTime createdAt, int plantRecordCount) {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.widthMeters = widthMeters;
+        this.heightMeters = heightMeters;
         this.location = location;
         this.createdAt = createdAt;
         this.plantRecordCount = plantRecordCount;
@@ -28,6 +32,10 @@ public class GardenResponse {
     public void setName(String name) { this.name = name; }
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
+    public double getWidthMeters() { return widthMeters; }
+    public void setWidthMeters(double widthMeters) { this.widthMeters = widthMeters; }
+    public double getHeightMeters() { return heightMeters; }
+    public void setHeightMeters(double heightMeters) { this.heightMeters = heightMeters; }
     public String getLocation() { return location; }
     public void setLocation(String location) { this.location = location; }
     public LocalDateTime getCreatedAt() { return createdAt; }

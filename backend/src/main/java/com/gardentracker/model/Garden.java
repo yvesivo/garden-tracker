@@ -15,6 +15,8 @@ public class Garden {
 
     private String name;
     private String description;
+    private double widthMeters;
+    private double heightMeters;
     private String location;
     private LocalDateTime createdAt;
 
@@ -27,6 +29,10 @@ public class Garden {
     public void setName(String name) { this.name = name; }
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
+    public double getWidthMeters() { return widthMeters; }
+    public void setWidthMeters(double widthMeters) { this.widthMeters = widthMeters; }
+    public double getHeightMeters() { return heightMeters; }
+    public void setHeightMeters(double heightMeters) { this.heightMeters = heightMeters; }
     public String getLocation() { return location; }
     public void setLocation(String location) { this.location = location; }
     public LocalDateTime getCreatedAt() { return createdAt; }

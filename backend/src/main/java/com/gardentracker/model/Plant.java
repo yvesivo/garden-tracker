@@ -16,6 +16,10 @@ public class Plant {
     @Enumerated(EnumType.STRING)
     private PlantCategory category;
 
+    private Integer daysTillHarvest;
+    private Integer spacingCm;
+    private Integer wateringIntervalDays;
+
     private String description;
 
     public Long getId() { return id; }
@@ -26,6 +30,12 @@ public class Plant {
     public void setLatinName(String latinName) { this.latinName = latinName; }
     public PlantCategory getCategory() { return category; }
     public void setCategory(PlantCategory category) { this.category = category; }
+    public Integer getDaysTillHarvest() { return daysTillHarvest; }
+    public void setDaysTillHarvest(Integer daysTillHarvest) { this.daysTillHarvest = daysTillHarvest; }
+    public Integer getSpacingCm() { return spacingCm; }
+    public void setSpacingCm(Integer spacingCm) { this.spacingCm = spacingCm; }
+    public Integer getWateringIntervalDays() { return wateringIntervalDays; }
+    public void setWateringIntervalDays(Integer wateringIntervalDays) { this.wateringIntervalDays = wateringIntervalDays; }
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
 }

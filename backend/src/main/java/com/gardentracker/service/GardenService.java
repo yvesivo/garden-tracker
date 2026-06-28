@@ -56,6 +56,8 @@ public class GardenService {
     private void updateFromRequest(Garden garden, GardenRequest request) {
         garden.setName(request.getName());
         garden.setDescription(request.getDescription());
+        garden.setWidthMeters(request.getWidthMeters());
+        garden.setHeightMeters(request.getHeightMeters());
         garden.setLocation(request.getLocation());
     }
 
@@ -64,6 +66,8 @@ public class GardenService {
                 garden.getId(),
                 garden.getName(),
                 garden.getDescription(),
+                garden.getWidthMeters(),
+                garden.getHeightMeters(),
                 garden.getLocation(),
                 garden.getCreatedAt(),
                 garden.getPlantRecords().size()

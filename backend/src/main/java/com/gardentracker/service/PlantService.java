@@ -62,6 +62,9 @@ public class PlantService {
         plant.setName(request.getName());
         plant.setLatinName(request.getLatinName());
         plant.setCategory(request.getCategory());
+        plant.setDaysTillHarvest(request.getDaysTillHarvest());
+        plant.setSpacingCm(request.getSpacingCm());
+        plant.setWateringIntervalDays(request.getWateringIntervalDays());
         plant.setDescription(request.getDescription());
     }
 
@@ -71,6 +74,9 @@ public class PlantService {
                 plant.getName(),
                 plant.getLatinName(),
                 plant.getCategory(),
+                plant.getDaysTillHarvest(),
+                plant.getSpacingCm(),
+                plant.getWateringIntervalDays(),
                 plant.getDescription()
         );
     }
