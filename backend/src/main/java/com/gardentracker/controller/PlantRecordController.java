@@ -1,7 +1,10 @@
 package com.gardentracker.controller;
 
+import com.gardentracker.dto.CalendarEventResponse;
 import com.gardentracker.dto.PlantRecordRequest;
 import com.gardentracker.dto.PlantRecordResponse;
+import com.gardentracker.dto.WateringRecommendation;
+import com.gardentracker.model.PlantStatus;
 import com.gardentracker.service.PlantRecordService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -31,6 +34,21 @@ public class PlantRecordController {
     @GetMapping("/garden/{gardenId}")
     public List<PlantRecordResponse> findByGarden(@PathVariable Long gardenId) {
         return plantRecordService.findByGardenId(gardenId);
+    }
+
+    @GetMapping("/status/{status}")
+    public List<PlantRecordResponse> findByStatus(@PathVariable PlantStatus status) {
+        return plantRecordService.findByStatus(status);
+    }
+
+    @GetMapping("/calendar")
+    public List<CalendarEventResponse> getCalendarEvents() {
+        return plantRecordService.getCalendarEvents();
+    }
+
+    @GetMapping("/garden/{gardenId}/watering")
+    public WateringRecommendation getWateringRecommendation(@PathVariable Long gardenId) {
+        return plantRecordService.getWateringRecommendation(gardenId);
     }
 
     @PostMapping

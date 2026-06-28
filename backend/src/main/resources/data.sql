@@ -21,6 +21,6 @@ INSERT INTO gardens (name, description, width_meters, height_meters, location, c
 INSERT INTO gardens (name, description, width_meters, height_meters, location, created_at) VALUES ('Terrassenbeet', 'Kräuter und Salat für die Terrasse', 1.5, 0.8, 'Berlin', CURRENT_TIMESTAMP);
 
 -- Beispieleinträge
-INSERT INTO plant_records (garden_id, plant_id, planting_date, status, notes) VALUES (1, 1, '2026-04-15', 'GROWING', 'Sorte: Cherrytomaten');
-INSERT INTO plant_records (garden_id, plant_id, planting_date, status, notes) VALUES (1, 5, '2026-04-10', 'GROWING', 'Tiefes Beet ideal für Karotten');
-INSERT INTO plant_records (garden_id, plant_id, planting_date, status, notes) VALUES (2, 8, '2026-03-01', 'PLANNED', 'Basilikum zu den Tomaten setzen');
+INSERT INTO plant_records (garden_id, plant_id, planting_date, expected_harvest_date, status, grid_x, grid_y, notes) VALUES (1, 1, '2026-04-15', '2026-06-24', 'GROWING', 0, 0, 'Sorte: Cherrytomaten');
+INSERT INTO plant_records (garden_id, plant_id, planting_date, expected_harvest_date, status, grid_x, grid_y, notes) VALUES (1, 5, '2026-04-10', '2026-07-09', 'GROWING', 2, 0, 'Tiefes Beet ideal für Karotten');
+INSERT INTO plant_records (garden_id, plant_id, planting_date, expected_harvest_date, actual_harvest_date, yield_kg, status, grid_x, grid_y, notes) VALUES (2, 8, '2026-03-01', '2026-03-31', '2026-04-05', 0.3, 'HARVESTED', 0, 0, 'Erste Ernte der Saison');
