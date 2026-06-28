@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { gardenApi, recordApi } from '../api/api.js';
 import StatusBadge from '../components/StatusBadge.jsx';
+import WeatherWidget from '../components/WeatherWidget.jsx';
 
 export default function GardenDetail() {
   const { id } = useParams();
@@ -52,6 +53,8 @@ export default function GardenDetail() {
         <p className="muted">{garden.location} · {garden.widthMeters} × {garden.heightMeters} m</p>
         {garden.description && <p>{garden.description}</p>}
       </div>
+
+      <WeatherWidget location={garden.location} />
 
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
         <h2 style={{ margin: 0 }}>Pflanzeinträge</h2>
