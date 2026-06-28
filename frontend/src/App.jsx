@@ -4,6 +4,8 @@ import Dashboard from './pages/Dashboard.jsx';
 import GardenList from './pages/GardenList.jsx';
 import GardenForm from './pages/GardenForm.jsx';
 import GardenDetail from './pages/GardenDetail.jsx';
+import PlantCatalog from './pages/PlantCatalog.jsx';
+import PlantForm from './pages/PlantForm.jsx';
 
 function NotFound() {
   return (
@@ -25,6 +27,9 @@ export default function App() {
           <Route path="/gardens/new" element={<GardenForm />} />
           <Route path="/gardens/:id/edit" element={<GardenForm />} />
           <Route path="/gardens/:id" element={<GardenDetail />} />
+          <Route path="/plants" element={<PlantCatalog />} />
+          <Route path="/plants/new" element={<PlantForm />} />
+          <Route path="/plants/:id/edit" element={<PlantForm />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
