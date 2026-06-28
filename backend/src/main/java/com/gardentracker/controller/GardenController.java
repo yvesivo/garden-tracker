@@ -3,6 +3,7 @@ package com.gardentracker.controller;
 import com.gardentracker.dto.GardenRequest;
 import com.gardentracker.dto.GardenResponse;
 import com.gardentracker.service.GardenService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -29,12 +30,12 @@ public class GardenController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public GardenResponse create(@RequestBody GardenRequest request) {
+    public GardenResponse create(@Valid @RequestBody GardenRequest request) {
         return gardenService.create(request);
     }
 
     @PutMapping("/{id}")
-    public GardenResponse update(@PathVariable Long id, @RequestBody GardenRequest request) {
+    public GardenResponse update(@PathVariable Long id, @Valid @RequestBody GardenRequest request) {
         return gardenService.update(id, request);
     }
 

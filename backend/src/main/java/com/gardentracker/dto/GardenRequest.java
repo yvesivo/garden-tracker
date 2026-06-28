@@ -1,9 +1,15 @@
 package com.gardentracker.dto;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class GardenRequest {
 
+    @NotBlank(message = "Name darf nicht leer sein")
     private String name;
+
     private String description;
+
+    @NotBlank(message = "Standort darf nicht leer sein")
     private String location;
 
     public String getName() { return name; }

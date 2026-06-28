@@ -3,6 +3,7 @@ package com.gardentracker.controller;
 import com.gardentracker.dto.PlantRecordRequest;
 import com.gardentracker.dto.PlantRecordResponse;
 import com.gardentracker.service.PlantRecordService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -34,12 +35,12 @@ public class PlantRecordController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public PlantRecordResponse create(@RequestBody PlantRecordRequest request) {
+    public PlantRecordResponse create(@Valid @RequestBody PlantRecordRequest request) {
         return plantRecordService.create(request);
     }
 
     @PutMapping("/{id}")
-    public PlantRecordResponse update(@PathVariable Long id, @RequestBody PlantRecordRequest request) {
+    public PlantRecordResponse update(@PathVariable Long id, @Valid @RequestBody PlantRecordRequest request) {
         return plantRecordService.update(id, request);
     }
 

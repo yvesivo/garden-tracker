@@ -1,11 +1,15 @@
 package com.gardentracker.dto;
 
 import com.gardentracker.model.PlantStatus;
+import jakarta.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 public class PlantRecordRequest {
 
+    @NotNull(message = "Garten muss angegeben werden")
     private Long gardenId;
+
+    @NotNull(message = "Pflanze muss angegeben werden")
     private Long plantId;
     private LocalDate plantingDate;
     private PlantStatus status;
