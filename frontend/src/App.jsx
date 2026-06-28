@@ -1,17 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
-
-function Home() {
-  return (
-    <div className="card">
-      <h1>🌱 GartenTracker</h1>
-      <p className="muted">
-        Verwalte deine Hochbeete, Pflanzen und Pflanzeinträge.
-        Das Frontend wird gerade aufgebaut – weitere Seiten folgen.
-      </p>
-    </div>
-  );
-}
+import Dashboard from './pages/Dashboard.jsx';
 
 function NotFound() {
   return (
@@ -28,7 +17,7 @@ export default function App() {
       <Navbar />
       <main className="main-content">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Dashboard />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
