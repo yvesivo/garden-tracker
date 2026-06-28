@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
 import Dashboard from './pages/Dashboard.jsx';
 import GardenList from './pages/GardenList.jsx';
+import GardenForm from './pages/GardenForm.jsx';
 
 function NotFound() {
   return (
@@ -20,6 +21,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/gardens" element={<GardenList />} />
+          <Route path="/gardens/new" element={<GardenForm />} />
+          <Route path="/gardens/:id/edit" element={<GardenForm />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
